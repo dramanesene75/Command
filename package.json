@@ -3,9 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "material-ui": "^0.20.2",
+    "prop-types": "latest",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-easy-swipe": "0.0.17",
+    "react-responsive-carousel": "^3.1.49",
+    "react-scripts": "3.0.1",
+    "react-swing": "^2.0.0",
+    "react-swipe": "^6.0.4",
+    "reactjs-popup": "^1.4.0"
   },
   "scripts": {
     "start": "react-scripts start",
