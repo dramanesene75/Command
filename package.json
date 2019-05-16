@@ -9,6 +9,7 @@
     "react-dom": "^16.8.6",
     "react-easy-swipe": "0.0.17",
     "react-responsive-carousel": "^3.1.49",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.1",
     "react-swing": "^2.0.0",
     "react-swipe": "^6.0.4",
