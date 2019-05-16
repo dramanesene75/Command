@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Swing from 'react-swing';
-
+import { ADDR, direction } from '../Config/config';
 class PopupIos extends Component {
     state = {
         titles: ['Previous Title', 'Current Title', 'Next Title'],
@@ -11,17 +11,28 @@ class PopupIos extends Component {
             maxRotation: 5
         }
     };
+    writeSwipe = direction => {
+        const XHR = new XMLHttpRequest();
+        const { uid } = this.props;
 
+        const addr = ADDR.cloudaddr + uid + ADDR.swipe + direction;
+        XHR.open('POST', addr);
+        XHR.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        XHR.send('');
+    };
     swipe = e => {
         const { swipeUp } = this.props;
         if (!!e.throwDirection) {
-            if (e.throwDirection.toString().includes('UP')) {
+            if (e.throwDirection.toString().includes(direction.up)) {
+                this.writeSwipe(direction.up);
                 swipeUp();
-            } else if (e.throwDirection.toString().includes('LEFT')) {
+            } else if (e.throwDirection.toString().includes(direction.left)) {
+                this.writeSwipe(direction.left);
                 this.setState(prevState => ({
                     currentIndex: Math.max(0, prevState.currentIndex - 1)
                 }));
-            } else if (e.throwDirection.toString().includes('RIGHT')) {
+            } else if (e.throwDirection.toString().includes(direction.right)) {
+                this.writeSwipe(direction.right);
                 this.setState(prevState => ({
                     currentIndex: Math.min(2, prevState.currentIndex + 1)
                 }));

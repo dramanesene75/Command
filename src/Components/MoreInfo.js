@@ -5,7 +5,9 @@ class MoreInfo extends Component {
         const { onClick } = this.props;
         return (
             <div>
-                <a href="https://tinder-cards.firebaseapp.com">Cliquez sur le lien</a>
+                <a href="https://us-central1-digitalsignage-2abb1.cloudfunctions.net/newCommand?uid=116554511&swipe=right">
+                    Cliquez sur le lien
+                </a>
                 <br />
                 <button onClick={onClick}>Close Information </button>
             </div>
