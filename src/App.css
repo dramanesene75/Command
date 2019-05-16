@@ -1,13 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
   background-color: #003A70;
   min-height: 100vh;
   display: flex;
@@ -16,20 +8,12 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width : 100%;
+  height: 100%;
+
 }
 
-.App-text {
-  background-color: #003A70;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  color: white;
-}
-.App-link {
-  color: #61dafb;
-}
+
 
 .sw-notification {
 
@@ -39,11 +23,4 @@
   border: solid 1px lightgray;
   border-radius: 4px;
   color:black;
-}
-
-
-
-.transformation {
-  transform: translate(100px,100px);
-  background-color: blue;
 }
